@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import { CreateUserUseCase } from '../useCases/CreateUserUseCase';
 import { handleUseCaseError } from '../handlers/handleUseCaseError';
+import { CreateUserUseCase } from '../useCases/CreateUserUseCase';
 
 class UserController {
   async post(req: Request, res: Response) {

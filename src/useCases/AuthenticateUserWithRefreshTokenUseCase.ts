@@ -1,10 +1,8 @@
+import { User } from '@prisma/client';
 import dayjs from 'dayjs';
 import { sign } from 'jsonwebtoken';
-
-import { User } from '@prisma/client';
-import { prismaClient } from '../prisma/prismaClient';
-
 import { ValidationException } from '../models/exceptions/ValidationException';
+import { prismaClient } from '../prisma/prismaClient';
 
 class AuthenticateUserWithRefreshTokenUseCase {
   async execute(refreshToken: string) {

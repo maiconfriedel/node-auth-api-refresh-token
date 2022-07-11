@@ -1,10 +1,8 @@
 import { compare } from 'bcrypt';
-import { sign } from 'jsonwebtoken';
 import dayjs from 'dayjs';
-
-import { prismaClient } from '../prisma/prismaClient';
-
+import { sign } from 'jsonwebtoken';
 import { ValidationException } from '../models/exceptions/ValidationException';
+import { prismaClient } from '../prisma/prismaClient';
 
 export type AuthenticateUserUseCaseParams = {
   email: string;

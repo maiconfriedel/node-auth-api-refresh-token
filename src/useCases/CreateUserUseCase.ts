@@ -1,8 +1,7 @@
-import { prismaClient } from '../prisma/prismaClient';
 import { hash } from 'bcrypt';
-
-import { CreateUserModel } from '../models/User';
 import { ValidationException } from '../models/exceptions/ValidationException';
+import { CreateUserModel } from '../models/User';
+import { prismaClient } from '../prisma/prismaClient';
 
 class CreateUserUseCase {
   async execute({ name, email, password, avatar_url }: CreateUserModel) {
