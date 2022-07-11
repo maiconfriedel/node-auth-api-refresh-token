@@ -8,8 +8,6 @@ const usersController = new UserController();
 
 userRoutes.post('/users', usersController.post);
 
-userRoutes.get('/users', ensureAuthenticated, (req, res) => {
-  return res.json({ uhul: true });
-});
+userRoutes.get('/users', ensureAuthenticated, usersController.get);
 
 export { userRoutes };

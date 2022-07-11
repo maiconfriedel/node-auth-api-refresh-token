@@ -5,7 +5,7 @@
   "author": "Maicon Gabriel Friedel",
   "license": "MIT",
   "scripts": {
-    "dev": "tsnd  --transpile-only --ignore node_modules src/server.ts"
+    "dev": "tsnd --ignore node_modules src/server.ts"
   },
   "dependencies": {
     "@prisma/client": "^4.0.0",
